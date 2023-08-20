@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{{#> layouts/base }}
+    {{#*inline "links"}}
+    <link rel="stylesheet" type="text/css" href="/secure/css/main.css"/>
+    <meta name="google-signin-scope" content="profile email">
+    <meta name="google-signin-client_id" content="955413592403-gs6tuq9bun2449djtvqpethteciie7kv.apps.googleusercontent.com">
+    {{/inline}}
+    {{#*inline "content"}}
+        <div class="row centerhv">
+            <div class="col s12">
+              <div class="card blue-grey darken-1">
+                <div class="card-content white-text">
+                  <span class="card-title centerel">Login</span>
+                  <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark" data-longtitle="true" ></div>
+                </div>
+                <div class="card-action centerel">
+                  <a class="" href="/home">Cancel</a>
+                </div>
+              </div>
+            </div>
+        </div>
+    {{/inline}}
+    {{#*inline "scripts"}}
+	<script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script type="text/javascript" src="/secure/js/script.js"></script>
+    {{/inline}}
+{{/layouts/base}}

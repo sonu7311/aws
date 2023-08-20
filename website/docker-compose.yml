@@ -1,0 +1,82 @@
+version: '3'
+
+services:
+  nodejs:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: nodejs
+    container_name: nodejs
+    restart: unless-stopped
+    networks:
+      - app-network
+
+  webserver:
+    image: nginx:mainline-alpine
+    container_name: webserver
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - web-root:/var/www/html
+      - ./nginx-conf:/etc/nginx/conf.d
+      - certbot-etc:/etc/letsencrypt
+      - certbot-var:/var/lib/letsencrypt
+      - dhparam:/etc/ssl/certs
+    depends_on:
+      - nodejs
+    networks:
+      - app-network
+
+  certbot:
+    image: certbot/certbot
+    container_name: certbot
+    volumes:
+      - certbot-etc:/etc/letsencrypt
+      - certbot-var:/var/lib/letsencrypt
+      - web-root:/var/www/html
+    depends_on:
+      - webserver
+    command: certonly --webroot --webroot-path=/var/www/html --email sagardsaxena@gmail.com --agree-tos --no-eff-email --staging -d sagardsaxena.com -d www.sagardsaxena.com -d dev.sagardsaxena.com 
+
+  #MySQL Service
+  db:
+    image: mysql:5.7.22
+    container_name: db
+    restart: unless-stopped
+    tty: true
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_DATABASE: your_mysql_database
+      MYSQL_ROOT_PASSWORD: your_mysql_root_password
+      SERVICE_TAGS: dev
+      SERVICE_NAME: mysql
+    volumes:
+      - dbdata:/var/lib/mysql/
+      - ./mysql/my.cnf:/etc/mysql/my.cnf
+    networks:
+      - app-network
+
+volumes:
+  certbot-etc:
+  certbot-var:
+  web-root:
+    driver: local
+    driver_opts:
+      type: none
+      device: /home/ubuntu/Website/static/
+      o: bind
+  dhparam:
+    driver: local
+    driver_opts:
+      type: none
+      device: /home/ubuntu/Website/dhparam/
+      o: bind
+  dbdata:
+    driver: local
+
+networks:
+  app-network:
+    driver: bridge 

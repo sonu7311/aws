@@ -1,0 +1,17 @@
+{
+  "name": "hoohacks_web_app",
+  "version": "1.0.0",
+  "description": "Node.js Server",
+  "author": "Sagar Saxena <sagardsaxena@example.com>",
+  "main": "server.js",
+  "scripts": {
+    "start": "node index.js > info.log"
+  },
+  "dependencies": {
+    "@sendgrid/mail": "^6.5.5",
+    "cookie-session": "1.4.0",
+    "express": "4.17.1",
+    "express-handlebars": "3.0.0",
+    "mongodb": "^3.5.5"
+  }
+}

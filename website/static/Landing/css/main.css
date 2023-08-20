@@ -1,0 +1,54 @@
+.parallax-container {
+    height: 50vh;
+}
+#bkg{
+    width: 100%;
+    z-index: -1;
+}
+#pfp{
+    position: relative;
+    height: 30vh;
+    z-index: 0;
+    margin: 0 auto;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.content_text{
+    position: relative;
+    top: -15vh;
+}
+@media(min-width: 1000px){
+    #content{
+        margin: 0px 10% 0px 10%;   
+    }
+}
+.header_text{
+    font-family: "Arvo";
+}
+.body_text{
+    font-family: "Open Sans";
+}
+.content_text div{
+    padding: 1%;
+}
+h4, p{
+    padding: 1%;
+}
+#summary p, #projects p, .card_small p{
+    margin: 0px;
+}
+.card_img img{
+    width: 100%;
+}
+h5, .card_small h6{
+    margin-top: 0px;
+}
+.card_small p{
+    padding:0px;
+}
+.expandPrompt{
+    visibility: hidden;
+    padding: 0px;
+    margin: 0px;
+}
+

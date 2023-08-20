@@ -1,0 +1,365 @@
+{{#> layouts/base }}
+    {{#*inline "links"}}
+        <link rel="stylesheet" type="text/css" href="/landing/css/main.css"/>
+        <link href='https://fonts.googleapis.com/css?family=Arvo' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+        <meta prefix="og: http://ogp.me/ns#" property="og:title" content="Sagar Saxena" />
+        <meta prefix="og: http://ogp.me/ns#" name="author" content="Sagar Saxena">
+        <meta prefix="og: http://ogp.me/ns#" property="og:type" content="Personal Website">
+        <meta prefix="og: http://ogp.me/ns#" property="og:description" content="My Personal Website" />
+        <meta prefix="og: http://ogp.me/ns#" property="og:image" content="/landing/css/purple_space.jpg" />
+        <meta prefix="og: http://ogp.me/ns#" property="og:url" content="/" />
+        <title>Sagar Saxena</title>
+    {{/inline}}
+    {{#*inline "content"}}
+    <div id="content">
+        <div id="top">
+            <div class="parallax-container">
+                <div class="parallax"><img id="bkg" src="/landing/css/purple_space.jpg"></div>
+				<!-- Photo by Zoltan Tasi on Unsplash -->
+            </div>
+            <img id="pfp" class="z-depth-5" src="/landing/css/me.png">
+        </div>
+
+        <div class="content_text">
+
+            <div id="summary" class="primary-theme z-depth-2" >
+                <h4 class="header_text secondary-theme-text">Sagar Saxena</h4>
+                <p class="flow-text body_text">I am a third-year Senior student at the University of Maryland at College Park. I am a Computer Science Major specializing in Machine Learning and minoring in Mathematics. My interests lie in Machine Learning and Computer Vision. You can find out more by clicking on the sections below. </p>
+				<p class="flow-text body_text">Welcome to my landing page! This website is created with HTML, CSS, Javascript, Handlebars, MatrealizeCSS, Node.js, Docker and running on AWS Lightsail. If you are interested can find the repository for this website <a href="https://github.com/sagars729/Website" class="secondary-theme-text">here</a>.</p>
+                <a href="https://www.linkedin.com/in/sagar-saxena-714804159/"><p style="text-align:right;"class="flow-text body_text secondary-theme-text">Check Out My LinkedIn Profile</p></a>
+            </div>
+
+            <div id="experience" class="secondary-theme">
+                <h4 class="header_text primary-theme-text">Experiences</h4>
+                
+				{{#> card elid="amazon" card_img="/landing/css/amazon.jpg" position="Software Development Engineering Intern" company="Amazon" duration="June 2021 - August 2021" location="Seattle, Washington"}}
+                    {{#*inline "modal_content"}}
+                        {{#> describe skillset='[Python,Scala,AWS,line,Machine Learning,AutoGluon,Jupyter,line,Scrum,Design Doc]'}}
+                            {{#* inline "description"}}
+                            <p class="body_text">I was an SDE 1 intern for the Amazon Associates team. I developed and owned an end-to-end recommendation system for matching brands with content creators. To accomplish this I created an ML recommender model and deployed it using AWS and Amazon's internal tools and services. I built a pipeline to automate data preprocessing and model training, evaluation, and prediction. I also authored a design document that detailed my research findings, proposed architecture, results, and next steps.</p>
+                            <p class="body_text">Throughout this internship, I learned how to work with multiple AWS Services such as Sagemaker, S3, EMR, ECR, CloudFormation, and IAM. I also took multiple courses through Amazon's Machine Learning University to expand my ML skills.</p>
+                            {{/inline}}
+                        {{/describe}}
+                    {{/inline}}
+                {{/card}}
+                
+				{{#> card elid="capone" card_img="/landing/css/capone.png" position="Tech Incubator Intern" company="Capital One" duration="June 2020 - May 2021" location="College Park, Maryland"}}
+                    {{#*inline "modal_content"}}
+                        {{#> describe skillset='[Python,ReactJS,AWS,line,Machine Learning,Unsupervised Learning,Google Colab,line,Agile,Open Source]'}}
+                            {{#* inline "description"}}
+                            <p class="body_text">I was a Software Engineering Intern at the Tech Incubator Lab at UMD.</p>
+                            <p class="body_text">During Spring 2021, I worked with the DataProfiler team to add new features and tests to the open-source DataProfiler repository.</p>
+							<p class="body_text">In the fall, I worked with the Accessibility team to migrate Capital One's digital property inventory to a web interface. We created a ReactJS Web App that was hosted on AWS using S3, Lambda, add DynamoDB. </p>
+							<p class="body_text">Over the summer, I worked with the CyberML team to develop anomaly detection models for network traffic using Machine Learning. We created models from the ground up - starting with an initial research stage and ending with developed proof of concept models that are being carried forward by the CyberML team. These models will help Capital One identify new and existing threats on their network perimeter.</p>
+                            <p class="body_text">I have also gained experience working with Agile Methodology and had the opportunity to use Capital One's Tech Invest In Yourself Days to gain skills in AWS and Unsupervised Learning.</p>
+
+                            {{/inline}}
+                        {{/describe}}
+                    {{/inline}}
+                {{/card}}
+                
+				{{#> card elid="ta" card_img="/landing/css/umd.png" position="Undergraduate Teaching Assistant" company="University of Maryland at College Park" duration="August 2020 - Present" location="College Park, Maryland"}}
+                    {{#*inline "modal_content"}}
+                        {{#> describe skillset='[Programming Languages,OCaml,Ruby,Rust,line,Teaching,Gradescope,Piazza]'}}
+                            {{#* inline "description"}}
+                            <p class="body_text">I am currently a peer mentor for the First-Year Innovation & Research Experience program. I am also a STIC Facilitator for CMSC389T (formerly CMSC388T).</p>
+                            <p class="body_text">During Winter 2021, I was a CS Undergradute Teaching Assistant for Introduction to Git, Github, and Project Management Tools (CMSC388T). I helped design the lectures, create the projects, and launch the new CMSC course. I also managed four teams in a basic DevOps environment.</p>
+                            <p class="body_text">During Fall 2020, I was a CS Undergraduate Teaching Assistant for CMSC330 (Organization of Programming Languages). I held weekly office hours and helped students learn and understand the course material. </p>
+                            {{/inline}}
+                        {{/describe}}
+                    {{/inline}}
+                {{/card}}
+
+				{{#> card elid="gan" card_img="/landing/css/umd.png" position="Undergraduate Researcher" company="University of Maryland at College Park" duration="October 2019 - Present" location="College Park, Maryland"}}
+                    {{#*inline "modal_content"}}
+                        {{#> describe skillset='[Python,Keras,line,Github,JupyterLab,Anaconda Cloud,line,Computer Vision,Machine Learning]'}}
+                            {{#* inline "description"}}
+                            <p class="body_text">I am currently pursing research on using Generative Adversarial Networks to improve building damage classification following natural disasters.</p>
+                            <p class="body_text">I have pursued research focused on investigating various Generative Adversarial Networks, their applications, and extrapolating them to new datasets and problems. As a part of this research, I wrote journal reports on the observations and analysis of experiments. I co-authored and submitted a paper on my research to the ACM Computing Surveys Journal where it is currently under review</p>
+                            {{/inline}}
+                        {{/describe}}
+                        {{#> card small="true" card_link="https://github.com/sagars729/GAN" card_img="/landing/css/github.png" position="Project Repository" company="Github" duration="Ongoing Project" location="This is a public repository"}}{{/card}}
+                    {{/inline}}
+                {{/card}}
+
+				{{#> card elid="dit" card_img="/landing/css/dit.png" position="Student Software Developer" company="University of Maryland at College Park" duration="January 2020 - June 2020" location="College Park, Maryland"}}
+                    {{#*inline "modal_content"}}
+                        {{#> describe skillset='[Python,Pytest,Selenium,Locust,JMeter,line,Github,ServiceNow,Jira,Bitbucket,AWS EC2,line,Automation,Testing]'}}
+                            {{#* inline "description"}}
+                            <p class="body_text">I worked as a Student Software Developer for the Division of Information Technology at the University of Maryland. I worked on projects with Service-Now and automated user testing using Selenium WebDriver and performance testing using Locust.</p>
+                            {{/inline}}
+                        {{/describe}}
+                        {{#> card small="true" card_link="https://github.com/sagars729/ServiceNow" card_img="/landing/css/github.png" position="Project Repository" company="Github" duration="January 2020 - June 2020" location="This is a public repository"}}{{/card}}
+                    {{/inline}}
+                {{/card}}
+
+                {{#> card elid="anant" card_img="/landing/css/anant.png" position="Internet Architect Apprentice, Blog Writer" company="Anant Corporation" duration="June 2018 - August 2018" location="Washington D.C."}}
+                    {{#*inline "modal_content"}}
+                        {{#> describe skillset='[Python,Node.js,React,line,Github,Digital Ocean,Docker,ElasticSearch,Kubernetes,Cassandra,Nightmare,Puppeteer,line,Machine Learning,Blogging]'}}
+                            {{#* inline "description"}}
+                            <p class="body_text">My primary objective was to work on the Smmindy project. Smmindy or the Sales Marketing Mind, is a project that involves scraping details of jobs (opportunities), people (leads), and companies (accounts) from various websites such as LinkedIn, RemoteOk, Github, etc, classifying this data to identify potential clients using Machine Learning, connecting all this data together, and displaying this data on a website. I worked with Python, NodeJS, ReactJS, Docker, Cassandra, Kubernetes, ElasticSearch, and Digital Ocean on this project.</p> 
+                            <p class="body_text">Secondary responsibilities included creating Headless Chrome Browser NodeJS bots for automating tasks and writing blogs for the Anant Corporation Blog.</p>
+                            {{/inline}}
+                        {{/describe}}
+                        {{#> card small="true" card_link="https://blog.anant.us/hiring-high-school-students-interns/" card_img="/landing/css/hire_anant.png" position="Hiring High School Students as Interns For Your Company" company="Anant Corporation" duration="August 15, 2018" location=""}}{{/card}}
+                        {{#> card small="true" card_link="https://blog.anant.us/python-for-machine-learning/" card_img="/landing/css/python_anant.png" position="Why Python is the Preferred Language For Machine Learning" company="Anant Corporation" duration="August 27, 2018" location=""}}{{/card}}
+                    {{/inline}}
+                {{/card}}
+
+                {{#> card elid="bp" card_img="/landing/css/bp.png" position="Community Lead, API Team Lead, Alexa Skills and Web Developer" company="Big Parser" duration="June 2017 - August 2017" location="Reston, Virginia"}}
+                    {{#*inline "modal_content"}}
+                        {{#> describe skillset='[Python,Node.js,AngularJS,HTML,CSS,line,Github,AWS,line,Machine Learning,Team Management]'}}
+                            {{#* inline "description"}}
+                            <p class="body_text">API Team Lead - Reviewed and Tested the company's API and created a website to provide documentation for the API. This website was later used at the Big Parser Summer Hackathon.</p>
+                            <p class="body_text">Developer for Voice Product - Coded an Alexa application that connects the Big Parser Grid to Alexa using Natural Language Processing, NodeJS, Python, and AWS Lambda. Met with other developers and company heads to talk to them about the Big Parser Voice product.</p>
+                            <p class="body_text">Community Lead - Met with High School and Middle School students and taught them how to code, use the Big Parser API, and create Grids and Alexa Skills to prepare them for the Big Parser Summer Hackathon. Mentored at the 14-hour Big Parser Hackathon held at Microsoft, and taught students how to code and helped them develop full-fledged projects using the Big Parser API.</p>
+                            {{/inline}}
+                        {{/describe}}
+                        {{#> card small="true" card_link="https://www.bigparser.com/summer/guides/" card_img="/landing/css/guides_bp.png" position="Big Parser Summer Hackathon Guide" company="Big Parser" duration="August 19, 2017" location="Chevy Chase, Maryland"}}{{/card}}
+                        {{#> card small="true" card_link="https://github.com/sagars729/BigParser_Guides" card_img="/landing/css/github.png" position="Big Parser Guide Repository" company="Github" duration="August 19, 2017" location="This Is a Public Repository"}}{{/card}}
+                    {{/inline}}
+                {{/card}}
+
+                {{#> card elid="math" card_img="/landing/css/math.jpg" position="Mathematics Tutor and Coach" company="Loudoun County Regional Math Tournament" duration="December 2015 - March 2018" location="Ashburn, Virginia"}}
+                    {{#*inline "modal_content"}}   
+                        {{#> describe skillset='[Teaching,Youth Mentoring,Team Building]'}}
+                            {{#* inline "description"}}
+                            <p class="body_text">I was a coach for a math team participating in the Loudoun County Regional Math Tournament, and it was my job to ensure that the students on my team are well prepared for their upcoming competition. As a coach, I taught various mathematical concepts in Algebra 1 and Geometry to a group of 8th graders. I taught students how to address problems that can arise during a competition and instill collaborative techniques and skills into the students, not only to aid them in this specific competition but also to help them with their daily academic careers.</p>
+                            {{/inline}}
+                        {{/describe}}
+                    {{/inline}}
+                {{/card}}
+
+                {{#> card elid="mandir" card_img="/landing/css/mandir.png" position="Hindi Tutor, Mentor" company="Rajdhani Mandir" duration="September 2016 - January 2017" location="Chantilly, Virginia"}}
+                    {{#*inline "modal_content"}}   
+                        {{#> describe skillset='[Hindi,line,Teaching,Youth Mentoring,Team Building]'}}
+                            {{#* inline "description"}}
+                            <p class="body_text">I tutored young children in Hindi and taught them how to speak common phrases and sentences in the language. I also taught kids about Indian culture, as well as teaching a basic version of Indian History and Geography.</p>
+                            {{/inline}}
+                        {{/describe}}
+                    {{/inline}}
+                {{/card}}
+            </div>
+
+            <div id="education" class="primary-theme z-depth-2">
+                <h4 class="header_text secondary-theme-text">Education</h4>
+
+                {{#> card elid="umd" card_img="/landing/css/umd.png" position="Computer Science Major" company="University of Maryland at College Park" duration="August 2019 - Present" location="College Park, Maryland"}}
+		    {{#*inline "modal_content"}}
+		    {{#> describe skillset='[Computer Science,Data Science,Mathematics]'}}
+            		{{#* inline "description"}}
+                    		<p class="body_text">Computer Science Major</h6>
+                    		<p class="body_text">Computer Science Departmental Honors Program</h6>
+                    		<p class="body_text">Data Science Specialization</h6>
+                    		<p class="body_text">Mathematics Minor</h6>
+            		{{/inline}}
+		    {{/describe}}
+                    <h6 class="header_text primary-theme-text">Courses</h6> 
+                    {{#> list disableFlow="true" category="Computer Science" contents='[Discrete Structures,Computer Systems,Algorithms,Organization of Programming Languages]'}}{{/list}}
+                    {{#> list disableFlow="true" category="Mathematics" contents='[Linear Algebra,Number Theory]'}}{{/list}}
+                    {{#> list disableFlow="true" category="Other Electives" contents='[First-Year Innovation & Research Experience]'}}{{/list}}
+                    {{/inline}}
+                {{/card}}
+
+                {{#> card elid="tj" card_img="/landing/css/tj.png" position="Alumnus, Computer Science" company="Thomas Jefferson High School For Science And Technology" duration="August 2015 - June 2019" location="Alexandria, Virginia"}}
+                    {{#*inline "modal_content"}}
+                    <h6 class="header_text primary-theme-text">Courses</h6> 
+                    {{#> list disableFlow="true" category="Post-AP Courses" contents='[Computer Vision,Artificial Intelligence,Parallel Computing,Multivariable Calculus,Linear Algebra,Web Development,Mobile Development]'}}{{/list}}
+                    {{#> list disableFlow="true" category="AP Courses" contents='[Computer Science,BC Calculus,Statistics,Psychology,Economics,Physics,Literature,Government]'}}{{/list}}
+                    {{#> list disableFlow="true" category="Other Electives" contents='[Computer Systems Lab,Cryptography,Analog Electronics,Digital Electronics]'}}{{/list}}
+                    {{/inline}}
+                {{/card}}
+
+                {{#> card elid="csl" card_img="/landing/css/csl.png" position="Researcher, Computer Systems Lab" company="Thomas Jefferson High School For Science And Technology" duration="September 2018 - June 2019" location="Alexandria, Virginia"}}
+                    {{#*inline "modal_content"}}   
+                        {{#> describe skillset='[Python,Matlab,SQLite,OpenCV,Keras,HTML,Javascript,CSS,line,Computer Vision,Machine Learning,Web Development,line,Research]'}}
+                            {{#* inline "description"}}
+                            <p class="body_text">For my senior research project at TJHSST, I created a system that uses Computer Vision and Interactive Machine Learning to take attendance of a traditional school classroom. This project has four phases: detection, tracking, learning, and classification.</p>
+                            <div class="row">
+                                <div class="col s6">
+                                    <img style="width:100%" src="/landing/css/detection.png">
+                                </div>
+                                <div class="col s6">
+                                    <h6>Detection</h6>
+                                    <p>To find faces in an image, I used the <a href="https://arxiv.org/pdf/1612.04402.pdf">Tiny Face Detection Algorithm</a>. It is robust to both occlusion and low quality.</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col s6">
+                                    <h6>Tracking</h6>
+                                    <p>To track faces in a video, I treated each frame as an <a href="https://en.wikipedia.org/wiki/Assignment_problem">assignment matching problem</a> and solved it with the <a href="https://www.geeksforgeeks.org/hungarian-algorithm-assignment-problem-set-1-introduction/">Hungarian Method</a>.</p>
+                                </div>
+                                <div class="col s6">
+                                    <video width="100%" loop autoplay>
+                                        <source src="/landing/css/this_is_america.mp4" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col s6">
+                                    <img style="width:100%" src="/landing/css/rid.png">
+                                </div>
+                                <div class="col s6">
+                                    <h6>Raw Image Database</h6>
+                                    <p>I used a basic filesystem to store raw images of each detected face. This database was used to train my machine learning models. </p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col s6">
+                                    <h6>SQLite Database</h6>
+                                    <p>I created an SQLite database that stores information on each detected face. This database was used to train my machine learning models.</p>
+                                </div>
+                                <div class="col s6">
+                                    <img style="width:100%" src="/landing/css/sqlite.png">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col s6">
+                                    <video width="100%" loop autoplay>
+                                        <source src="/landing/css/class_anonymous.mp4" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </div>
+                                <div class="col s6">
+                                    <h6>Video Overlay</h6>
+                                    <p>I created a program to overlay recorded videos with detections and classifications using data from the databases.</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col s6">
+                                    <h6>Training</h6>
+                                    <p>I created a program to train a Machine Learning Model for Categorical Classification.</p>
+                                </div>
+                                <div class="col s6">
+                                    <img style="width:100%" src="/landing/css/train_acc_class.png">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col s6">
+                                    <img style="width:100%" src="/landing/css/model_code.png">
+                                </div>
+                                <div class="col s6">
+                                    <h6>Model</h6>
+                                    <p>My model drew inspiration from <a href="https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf">AlexNet</a> and incorporated an eight layer structure with 5 Convolutional Layers, 3 MaxPooling Layers, and 3 Fully Connected Layers. I used <a href="https://keras.io/models/model/">Keras's Functional Model API</a> to create the model.</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col s6">
+                                    <h6>Parallel Computing</h6>
+                                    <p>The Detection, Training, and Testing phases were distributed across both the CPU cores and GPU threads.</p>
+                                </div>
+                                <div class="col s6">
+                                    <img style="width:100%" src="/landing/css/gpu_cpu.png">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col s6">
+                                    <video width="100%" loop autoplay>
+                                        <source src="/landing/css/class_anonymous_overlay.mp4" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </div>
+                                <div class="col s6">
+                                    <h6>Video Overlay</h6>
+                                    <p>Green Boxes Represent Correct Classifications. Red Boxes Represent Incorrect Classifications. A Confidence Value Is Shown as a Percentange.</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col s6">
+                                    <h6>Web Interface</h6>
+									<p>To allow users to easily interact with this project, I created a website that can be run on localhost.</p>
+                                </div>
+                                <div class="col s6">
+                                    <img style="width:100%" src="/landing/css/website.png">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col s6">
+                                    <img style="width:100%" src="/landing/css/website.png">
+                                </div>
+                                <div class="col s6">
+                                    <h6>Interactive ML</h6>
+									<p>By using the Web Interface, users can easily train the model with new data and increase the accuracy of their model.</p>
+                                </div>
+                            </div>
+                            {{/inline}}
+                        {{/describe}}
+                        {{#> card small="true" card_link="https://github.com/sagars729/attendance" card_img="/landing/css/github.png" position="Project Repository" company="Github" duration="2018-2019" location="This is a public repository"}}{{/card}}
+                    {{/inline}}
+                {{/card}}
+            </div>
+
+            <div id="skills" class="secondary-theme">
+                <h4 class="header_text primary-theme-text">Skills</h4>
+                {{#> list category="Programming Languages" contents='[Python, C++, C, Node.js, Java, JavaScript, HTML5, CSS3, AngularJS, React, Android Studio, Solidity, Matlab, SQL, SQLite,  Ruby, OCaml]'}}{{/list}}
+                {{#> list category="Operating Systems" contents='[MacOS, Linux, Windows, ChromeOS]'}}{{/list}}
+                {{#> list category="Software and Libraries" contents='[TensorFlow, Keras, OpenCV, OpenMP, OpenGL, CUDA, Docker, ElasticSearch, VirtualBox, Amazon Web Services, DigitalOcean, Selenium]'}}{{/list}}
+                {{#> list category="Industry Knowledge" contents='[Machine Learning, Artificial Intelligence, Deep Learning, Computer Vision, Parallel Computing]'}}{{/list}}
+                {{#> list category="Interpersonal Skills" contents='[Team Management, Team Building, Youth Mentoring, Teaching]'}}{{/list}}
+                {{#> list category="Languages" contents='[English,Hindi]'}}{{/list}}
+            </div>
+
+            <div id="extracurriculars" class="primary-theme z-depth-2">
+                <h4 class="header_text secondary-theme-text">Extracurriculars</h4>
+                {{#> card elid="muas" card_img="/landing/css/muas.jpg" position="Vision Sub-Team, Maryland Unmanned Aerial Systems" company="University of Maryland at College Park" duration="September 2019 - Present" location="College Park, Maryland"}}
+                    {{#*inline "modal_content"}}   
+                        {{#> describe skillset='[Python,Arduino,line,Google Colaboratory,line,Machine Learning]'}}
+                            {{#* inline "description"}}
+                            <p class="body_text">I am a member of the Maryland Unmanned Aerial Systems Club at UMD. Through this club we engineer and program a drone to compete at the Association For Unmanned Systems International's Student Unmanned Aerial Systems Competition. I work on the Vision Subteam and work with enabling the drone to process and classify ground targets.</p>
+                            {{/inline}}
+                        {{/describe}}
+                    {{/inline}}
+                {{/card}}
+
+                {{#> card elid="rres" card_img="/landing/css/rres.jpg" position="Member, Rising Researchers" company="University of Maryland at College Park" duration="September 2019 - Present" location="College Park, Maryland"}}
+                    {{#*inline "modal_content"}}   
+                        {{#> describe skillset='[Teaching,Youth Mentoring]'}}
+                            {{#* inline "description"}}
+                            <p class="body_text">I am a member of the Rising Researchers Club at UMD. I work with members of this club to create material to educate high school students on how they can read and understand research papers and get involved with academic research.</p>
+                            {{/inline}}
+                        {{/describe}}
+                    {{/inline}}
+                {{/card}}
+            </div>
+
+            <div id="accomplishments" class="secondary-theme">
+                <h4 class="header_text primary-theme-text">Accomplishments</h4>
+				{{#> card card_link="https://my.generalassemb.ly/awards/CV69HDHJR" card_img="/landing/css/ga.png" position="Certified Data Scientist Level 1 Credential" company="General Assembly" duration="November 2019" location=""}}
+				{{/card}}
+
+                {{#> card card_link="https://edu.openedg.org/certificates/verify/roZE.GCtS.b5FD" card_img="/landing/css/pinst.png" position="Certified Associate In Python Programming" company="Python Institute, OpenEDG Education Platform" duration="September 2018" location="International"}}
+                {{/card}}
+
+                {{#> card elid="acm" card_img="/landing/css/acm.png" position="3rd Place" company="ACM@UVa: HSPC" duration="March 2018, March 2019" location="University of Virginia"}}
+                    {{#*inline "modal_content"}} 
+                        {{#> describe skillset='[Python,C++,Java,line,Team Collaboration,Competitive Programming]'}}
+                            {{#* inline "description"}}
+                            <p class="body_text">I competed with a team of students on behalf of the Senior Computer Team at the High School Programming Competition at the University of Virginia. My team and I placed third at the competition for two years in a row.</p>
+                            {{/inline}}
+                        {{/describe}}
+                    {{/inline}}
+                {{/card}}
+            </div>
+
+            <div id="scores" class="primary-theme z-depth-2">
+                <h4 class="header_text secondary-theme-text">Scores</h4>
+                {{#> list category="Standardized Tests" contents='[ACT 36,SAT 1560]'}}{{/list}}
+            </div>
+
+            <div id="projects" class="secondary-theme">
+                <h4 class="header_text primary-theme-text">Projects</h4>
+                <p class="flow-text body_text">My Github page highlights a few projects that I have worked on, but if you are looking for something specific or would like to learn more about my work, feel free to contact me through LinkedIn.</p>
+                <div class="row">
+                    <div class="col s6" style="padding-left:0px;"><a href="https://github.com/sagars729"><p style=""class="flow-text body_text primary-theme-text">View My Github Profile</p></a></div>
+                    <div class="col s6" style="padding-right:0px;"><a href="https://www.linkedin.com/in/sagar-saxena-714804159/"><p style="text-align:right;"class="flow-text body_text primary-theme-text">Contact Me On LinkedIn</p></a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{/inline}}
+    {{#*inline "scripts"}}
+        <script id="landing_script" type="text/javascript" src="/landing/js/script.js" data-jump="{{jump}}"></script>
+    {{/inline}}
+{{/layouts/base}}
